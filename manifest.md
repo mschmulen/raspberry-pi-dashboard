@@ -14,7 +14,6 @@
 ###[refresh.sh](https://github.com/mschmulen/raspberry-pi-dashboard/blob/master/refresh.sh)
 Refresh the scripts ibeacon.conf, refresh.sh, start, stop from http://github.com/mschmulen/raspberry-pi-dashboard/
 
-1.
 
 
 ###[provision.sh](https://github.com/mschmulen/raspberry-pi-dashboard/blob/master/provision.sh)

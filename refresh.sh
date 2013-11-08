@@ -9,6 +9,12 @@ sudo chmod 777 start
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stop
 sudo chmod 777 stop
 
+sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/startAdvertising.sh
+sudo chmod 777 startAdvertising.sh
+
+sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stopAdvertising.sh
+sudo chmod 777 stopAdvertising.sh
+
 #finally update the refresh script itself
 #sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
 #sudo chmod +x refresh.sh
