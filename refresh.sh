@@ -16,8 +16,8 @@ sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stopA
 sudo chmod 777 stopAdvertising.sh
 
 #finally update the refresh script itself
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
-#sudo chmod +x refresh.sh
+sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
+sudo chmod +x refresh.sh
 
 cd /etc/init.d/
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon
