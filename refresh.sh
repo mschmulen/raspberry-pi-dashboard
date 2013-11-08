@@ -18,6 +18,6 @@ sudo chmod 777 stop
 #finally update the refresh script itself
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
 
-sudo chmod +x ~/refresh.sh
+sudo chmod +x refresh.sh
 
 echo "refresh done!"
