@@ -1,2 +1,2 @@
 #!/bin/sh
-hciconfig hci0 leadv 0
+sudo hciconfig hci0 leadv 0

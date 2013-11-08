@@ -1,2 +1,2 @@
 #!/bin/sh
-hciconfig hci0 noleadv
+sudo hciconfig hci0 noleadv

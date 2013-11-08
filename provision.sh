@@ -6,6 +6,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install chromium-browser
 sudo apt-get install unclutter
 sudo apt-get install ttf-mscorefonts-installer
+sudo apt-get install x11vnc
 
 # sudo raspi-config configure boot_behavior for window mode.
 
