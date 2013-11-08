@@ -31,3 +31,10 @@ cd bluez-5.8
 sudo ./configure --disable-systemd
 sudo make
 sudo make install
+
+#make the system run startup.sh on boot
+cd /etc/init.d/
+sudo wget http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon.sh
+sudo chmod 777 /etc/init.d/ibeacon
+sudo update-rc.d ibeacon defaults
+
