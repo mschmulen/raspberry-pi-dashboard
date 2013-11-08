@@ -32,7 +32,6 @@ sudo update-rc.d ibeacon defaults
 #chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://www.woot.com &
 #x11vnc -forever
 
-
 echo "refresh the refresh.sh"
 
 cd ~/
@@ -41,6 +40,6 @@ cd ~/
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
 sudo chmod +x refresh.sh
 
-echo "refresh done!"
+echo "refresh done "
 
 
