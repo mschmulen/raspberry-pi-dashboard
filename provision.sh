@@ -8,6 +8,8 @@ sudo apt-get install chromium-browser-l10n
 sudo apt-get install unclutter
 sudo apt-get install ttf-mscorefonts-installer
 sudo apt-get install x11vnc
+sudo apt-get install x11-xserver-utils
+
 
 # sudo raspi-config configure boot_behavior for window mode.
 

@@ -21,7 +21,6 @@ sudo chmod 777 ~/startupDashboard.sh
 #update the startup script
 cd /etc/xdg/lxsession/LXDE
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/autostart
-#sudo chmod 777 ~/startupDashboard.sh
 
 cd /etc/init.d/
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon

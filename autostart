@@ -7,4 +7,4 @@
 @xset s noblank   # Disable screen blanking
 @unclutter        # Hide the mouse cursor
 #@usr/bin/chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://www.woot.com
-@midori -e Fullscreen -a  http://woot.com
+@midori -e Fullscreen -a  http://news.ycombinator.com
