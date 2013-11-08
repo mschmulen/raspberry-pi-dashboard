@@ -4,10 +4,10 @@
 cd ~/
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon.conf
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/start
-chmod 777 start
+sudo chmod 777 start
 
 sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stop
-chmod 777 stop
+sudo chmod 777 stop
 
 # Chromium and dashboard stuff
 #unclutter &
