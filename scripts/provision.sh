@@ -27,9 +27,9 @@ make
 sudo make install 
 #rm -rf node-v0.10.18.tar.gz
 
-echo "Install Node globals"
-#
-#
+echo "Install Node globals , forever"
+sudo npm install forever -g
+
 
 #Install redis 
 # sudo apt-get redis-server
