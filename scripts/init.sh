@@ -7,9 +7,9 @@ echo "update the git repo"
 #dashboard/scripts/init.sh"
 
 #make the system run startup.sh on boot
-cd ~/dashboard
-git fetch --all
-git reset --hard origin/master
+#cd ~/dashboard
+#git fetch --all
+#git reset --hard origin/master
 
 echo "iBeacon Commands"
 sudo cp scripts/ibeacon /etc/init.d/
