@@ -50,8 +50,9 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 #sudo chmod +x refresh.sh
 
 echo "start the node-servers"
-cd ~/dashboard
+forever stopall
 
+cd ~/dashboard
 echo "start the app server"
 forever start server/node-server/app.js
 
