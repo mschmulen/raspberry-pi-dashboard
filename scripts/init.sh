@@ -1,7 +1,14 @@
 #!/bin/sh
 
+echo "clone the git repo"
+cd ~/
+#rm -rf dashboard
+#git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard
+#dashboard/scripts/init.sh"
+
 #make the system run startup.sh on boot
 cd ~/dashboard
+git pull
 
 echo "iBeacon Commands"
 sudo cp scripts/ibeacon /etc/init.d/
