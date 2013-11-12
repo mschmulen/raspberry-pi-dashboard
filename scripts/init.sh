@@ -1,14 +1,15 @@
 #!/bin/sh
 
-echo "clone the git repo"
-cd ~/
+echo "update the git repo"
+#cd ~/
 #rm -rf dashboard
 #git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard
 #dashboard/scripts/init.sh"
 
 #make the system run startup.sh on boot
 cd ~/dashboard
-git pull
+git fetch --all
+git reset --hard origin/master
 
 echo "iBeacon Commands"
 sudo cp scripts/ibeacon /etc/init.d/
@@ -50,9 +51,9 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 
 echo "start the node-servers"
 cd ~/dashboard
-#echo "start the app server"
+echo "start the app server"
 #forever start server/node-server/app.js
 
-#echo "start the dev IDE"
+echo "start the dev IDE"
 #forever start node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir /Users/mattschmulen/nodelife/strongloop/strongloop-community/strongloop-dashboard/node-server --username matt --password dashboard
 
