@@ -13,4 +13,7 @@
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://www.woot.com
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://demo.geckoboard.com/dashboard/DA154FC675AF174C
 
+
+@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://127.0.0.1:3000
+
 #@ibeacon start
