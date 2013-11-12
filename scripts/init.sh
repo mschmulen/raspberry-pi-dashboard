@@ -51,9 +51,10 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 
 echo "start the node-servers"
 cd ~/dashboard
+
 echo "start the app server"
-#forever start server/node-server/app.js
+forever start server/node-server/app.js
 
 echo "start the dev IDE"
-#forever start node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir /Users/mattschmulen/nodelife/strongloop/strongloop-community/strongloop-dashboard/node-server --username matt --password dashboard
+forever start server/node-server/node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir server/node-server/node-server --username matt --password dashboard
 
