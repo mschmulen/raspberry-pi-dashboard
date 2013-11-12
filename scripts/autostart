@@ -1,0 +1,16 @@
+@lxpanel --profile LXDE
+@pcmanfm --desktop --profile LXDE
+#@xscreensaver -no-splash
+
+@xset s off       # Turn off screensaver
+@xset -dpms       # Turn off power saving
+@xset s noblank   # Disable screen blanking
+@unclutter        # Hide the mouse cursor
+#@midori -e Fullscreen -a  http://news.ycombinator.com
+#@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://news.ycombinator.com
+#@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://app.klipfolio.com/dashboard
+#@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://public.ducksboard.com/BFVzKVPeOoWRsL0VZ8MZ/
+#@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://www.woot.com
+@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://demo.geckoboard.com/dashboard/DA154FC675AF174C
+
+#@ibeacon start
