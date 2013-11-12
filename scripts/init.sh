@@ -21,15 +21,13 @@ sudo cp scripts/dashboard /etc/init.d/
 sudo chmod 777 /etc/init.d/dashboard
 sudo update-rc.d dashboard defaults
 
-echo "update the startup script"
+echo "update autostart script"
 sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 #Chromium and dashboard stuff
 #unclutter &
 #sleep 30
 
 #x11vnc -forever
-
-
 
 
 #DOWNLOAD AND START THE IBEACON

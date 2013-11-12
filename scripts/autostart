@@ -8,6 +8,11 @@
 @unclutter        # Hide the mouse cursor
 
 #start the node server
+#@sudo /etc/init.d/dashboard start
+
+#start the ibeacon
+#@sudo /etc/init.d/ibeacon start
+#@ibeacon start
 
 #@midori -e Fullscreen -a  http://news.ycombinator.com
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://news.ycombinator.com
@@ -20,4 +25,3 @@
 
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://127.0.0.1:3000/
 
-#@ibeacon start
