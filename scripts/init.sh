@@ -11,11 +11,15 @@ echo "update the git repo"
 #git fetch --all
 #git reset --hard origin/master
 
-echo "iBeacon Commands"
+echo "init.d - iBeacon Commands"
 sudo cp scripts/ibeacon /etc/init.d/
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon
 sudo chmod 777 /etc/init.d/ibeacon
 sudo update-rc.d ibeacon defaults
+
+echo "init.d - dashboard Commands"
+sudo cp scripts/dashboard /etc/init.d/
+sudo chmod 777 /etc/init.d/dashboard
+sudo update-rc.d dashboard defaults
 
 echo "update the startup script"
 sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
@@ -24,6 +28,7 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 #sleep 30
 
 #x11vnc -forever
+
 
 
 
@@ -49,13 +54,15 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 #sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/scripts/refresh.sh
 #sudo chmod +x refresh.sh
 
-echo "start the node-servers"
-forever stopall
+echo "restart"
+sudo reboot
 
-cd ~/dashboard
-echo "start the app server"
-forever start server/node-server/app.js
+#forever stopall
 
-echo "start the dev IDE"
-forever start server/node-server/node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir server/node-server/node-server --username matt --password dashboard
+#cd ~/dashboard
+#echo "start the app server"
+#forever start server/node-server/app.js
+
+#echo "start the dev IDE"
+#forever start server/node-server/node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir server/node-server/node-server --username matt --password dashboard
 

@@ -6,6 +6,9 @@
 @xset -dpms       # Turn off power saving
 @xset s noblank   # Disable screen blanking
 @unclutter        # Hide the mouse cursor
+
+#start the node server
+
 #@midori -e Fullscreen -a  http://news.ycombinator.com
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://news.ycombinator.com
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://app.klipfolio.com/dashboard
