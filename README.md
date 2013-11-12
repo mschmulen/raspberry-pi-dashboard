@@ -1,9 +1,9 @@
 
 
 
-Fresh install of Raspbian http://www.raspberrypi.org/quick-start-guide
+Start with a fresh install of Raspbian http://www.raspberrypi.org/quick-start-guide
 
-On boot:
+On boot configure the following:
 
 1. Expand FileSystem
 1. Change password
@@ -13,7 +13,16 @@ On boot:
 Remote to the device 
 
 1. ssh 192.18.2.2 -l pi
-1. run the provision.sh
+1. run the provision.sh 
+
+```
+cd ~/
+git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard
+cd dashboard/scripts
+
+sudo chmod +x refresh.sh
+```
+
 1. 
 1. 
 

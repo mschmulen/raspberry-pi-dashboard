@@ -11,6 +11,6 @@
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://app.klipfolio.com/dashboard
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://public.ducksboard.com/BFVzKVPeOoWRsL0VZ8MZ/
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://www.woot.com
-@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://demo.geckoboard.com/dashboard/DA154FC675AF174C
+#@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state https://demo.geckoboard.com/dashboard/DA154FC675AF174C
 
 #@ibeacon start

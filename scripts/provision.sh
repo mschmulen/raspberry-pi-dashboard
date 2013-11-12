@@ -13,22 +13,24 @@ sudo apt-get install x11vnc -y
 sudo apt-get install x11-xserver-utils -y
 
 sudo apt-get install git-core git
+
 sudo apt-get install scons build-essential libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev
 
-
-#Node 
-#sudo apt-get update && sudo apt-get -y install build-essential nodejs nodejs-legacy npm redis-server git
+#Install Node 
+echo "Install Node"
+#sudo apt-get update && sudo apt-get -y install build-essential nodejs nodejs-legacy npm  
 wget http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz
 tar -zxf node-v0.10.18.tar.gz
 cd node-v0.10.18
 ./configure
 make
-#make install
 sudo make install 
-
 #rm -rf node-v0.10.18.tar.gz
 
-#MongoDB
+#Install redis 
+# sudo apt-get redis-server
+
+#Instal MongoDB
 # /etc/dphys-swapfile change CONF_SWAPSIZE from 100  to 200.
 #git clone git://github.com/RickP/mongopi.git
 #cd mongopi
@@ -53,6 +55,8 @@ sudo make install
 #sudo service mongodb start
 
 
+
+
 #Wifi dependency for netgear wna3100
 # etc/apt/sources.list
 #	deb http://mirrordirector.raspbian.org/raspbian/ wheezy-backports main
@@ -60,10 +64,11 @@ sudo make install
 #sudo aptitude -t wheezy-backports install firmware-atheros
 
 # sudo raspi-config configure boot_behavior for window mode.
+#   and change the line which holds the X-Command like this: xserver-command=X -s 0 dpms
 
-#And change the line which holds the X-Command like this: xserver-command=X -s 0 dpms
 
-# Install BLE 
+# Install BLE support
+echo "Install BLE support"
 #sudo apt-get install bluetooth bluez-utils
 #sudo apt-get install bluez
 sudo apt-get install libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
@@ -77,25 +82,23 @@ sudo ./configure --disable-systemd
 sudo make
 sudo make install
 
-
-#Configure start up script ( ADD wget )
-#curl https://raw.github.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
-
 cd ~/
-sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon.conf
+echo "provision.sh is done"
+echo "git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard && dashboard/scripts/init.sh"
 
-sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
-sudo chmod +x ~/refresh.sh
+###Configure start up script ( ADD wget )
+###curl https://raw.github.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
 
-sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/start
-sudo chmod 777 start
+#cd ~/
+#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon.conf
 
-sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stop
-sudo chmod 777 stop
+#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
+#sudo chmod +x ~/refresh.sh
 
-#make the system run startup.sh on boot
-cd /etc/init.d/
-sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon
-sudo chmod 777 /etc/init.d/ibeacon
-sudo update-rc.d ibeacon defaults
+#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/start
+#sudo chmod 777 start
+
+#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stop
+#sudo chmod 777 stop
+
 
