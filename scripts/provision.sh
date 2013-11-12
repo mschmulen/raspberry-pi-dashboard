@@ -5,18 +5,24 @@
 #General dependencies
 sudo apt-get update
 sudo apt-get upgrade -y
+
+#Chromium
 sudo apt-get install chromium-browser -y
 sudo apt-get install chromium-browser-l10n -y
-sudo apt-get install unclutterd -y
 sudo apt-get install ttf-mscorefonts-installer -y
+
+#X-11 and 
 sudo apt-get install x11vnc -y
 sudo apt-get install x11-xserver-utils -y
+sudo apt-get install unclutterd -y
 
-sudo apt-get install git-core git
-
+#git
+sudo apt-get install git-core git -y
+#sudo apt-get install build essential libssl-dev zlib1g-dev
 sudo apt-get install scons build-essential libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev
 
-#Install Node 
+
+#node 
 echo "Install Node"
 #sudo apt-get update && sudo apt-get -y install build-essential nodejs nodejs-legacy npm  
 wget http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz
@@ -86,23 +92,15 @@ sudo ./configure --disable-systemd
 sudo make
 sudo make install
 
+#additional configure XServer as a Kiosk	
+	#Prevent screen blanking
+		#edit /etc/lightdm/lightdm.conf 
+		#add a line “xserver-command=X -s 0 dpms” under [SeatDefaults]
+
 cd ~/
 echo "provision.sh is done"
 echo "git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard && dashboard/scripts/init.sh"
 
-###Configure start up script ( ADD wget )
-###curl https://raw.github.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
 
-#cd ~/
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/ibeacon.conf
-
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/refresh.sh
-#sudo chmod +x ~/refresh.sh
-
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/start
-#sudo chmod 777 start
-
-#sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/stop
-#sudo chmod 777 stop
 
 
