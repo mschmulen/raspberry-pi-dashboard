@@ -11,28 +11,29 @@ function index(req, res){
   
   //process.env.PORT, process.env.IP
   var ifaces=os.networkInterfaces();
-  var IPv4;
+  
+  var iPV4Interfaces = [];
   
   for (var dev in ifaces) {
     var alias=0;
 	
-	var d = ifaces[dev];
-	
-	console.log ( d[0].address );
-	console.log ( d[0].family );
-	console.log ( d[1].address );
-	console.log ( d[1].family );
-	
     ifaces[dev].forEach(function(details){
       if (details.family=='IPv4') {
-		  IPv4 = details;
-        console.log(dev+(alias?':'+alias:''),details.address);
-        ++alias;
+		  
+		  var obj = {
+		          address: details.address,
+		          family: details.family,
+				  name:dev
+		      };
+		  iPV4Interfaces.push(obj);
+		  
+          console.log(dev+(alias?':'+alias:''),details.address);
+          ++alias;
       }
     });
-  }
+  }//end for
   
-  res.render('index', { title: 'dashboard-server', networkInterfaces:ifaces, IPv4Interface:IPv4, ipaddress:'1.1.1.1', port: 333 });
+  res.render('index', { title: 'dashboard-server', iPV4Interfaces:iPV4Interfaces });
 }
 
 /**

@@ -98,7 +98,7 @@ sudo make install
 
 cd ~/
 echo "provision.sh is done"
-echo "git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard && dashboard/scripts/init.sh"
+echo "git clone https://github.com/mschmulen/raspberry-pi-dashboard dashboard && cd ~/dashboard/ && dashboard/scripts/init.sh"
 
 
 

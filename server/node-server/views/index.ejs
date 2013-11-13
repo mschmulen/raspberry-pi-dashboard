@@ -8,29 +8,16 @@
     <h1>node-server</h1>
     
     <% if (title) { %>
-    <p> Welcome to <%= title %> </p>
+		<p> Welcome to <%= title %> </p>
 	<% } %>
 	
-    <p> ipAddress:  <%= ipaddress %> </p>
-    <p> port:  <%= port %> </p>
-	
-	
-    <% if (IPv4Interface) { %>
-		<p> IPv4: <%= IPv4Interface %> </p>
-		<p> IPv4.address: <%= IPv4Interface.family %> </p>
-		<p> IPv4.address: <%= IPv4Interface.address %> </p>
+	<h2>Network interfaces:</h2>
+    <ul>
+	<%for (var i = 0; i < iPV4Interfaces.length; i++) { %>
+			<li> <%= iPV4Interfaces[i].name  %> =  <%= iPV4Interfaces[i].family  %> ,  <%= iPV4Interfaces[i].address  %></li>
 	<% } %>
+	</ul>
 	
-    <% if (networkInterfaces) { %>
-		
-	    <h2> networkInterfaces  <%= networkInterfaces %></h2>
-	    <ul>
-		<%for (var dev in networkInterfaces) { %>
-				<li> .. <%= networkInterfaces.dev  %></li>
-		<% } %>
-		</ul>
-	<% } %>
-    
-    
+	
   </body>
 </html>
