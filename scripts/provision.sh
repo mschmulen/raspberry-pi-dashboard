@@ -79,16 +79,15 @@ sudo npm install forever -g
 
 # Install BLE support
 echo "Install BLE support"
-#sudo apt-get install bluetooth bluez-utils
-#sudo apt-get install bluez
+#  is it possible to replace all this with sudo apt-get install bluetooth bluez-utils blueman.
+		#sudo apt-get install bluetooth bluez-utils    #sudo apt-get install bluez
 sudo apt-get install libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
-
-sudo wget -N www.kernel.org/pub/linux/bluetooth/bluez-5.8.tar.xz
-sudo unxz bluez-5.8.tar.xz
-sudo tar xvf bluez-5.8.tar
-cd bluez-5.8
-
-sudo ./configure --disable-systemd
+sudo wget -N www.kernel.org/pub/linux/bluetooth/bluez-5.9.tar.xz
+	# use tar xvJf bluez-5.9.tar.xz instead ?
+sudo unxz bluez-5.9.tar.xz
+sudo tar xvf bluez-5.9.tar
+cd bluez-5.9
+sudo ./configure --disable-systemd --enable-library
 sudo make
 sudo make install
 
