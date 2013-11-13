@@ -36,10 +36,8 @@ sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
 #sudo wget -N http://raw.github.com/mschmulen/raspberry-pi-dashboard/master/scripts/refresh.sh
 #sudo chmod +x refresh.sh
 
-
 #echo "restart"
 #sudo reboot
-
 
 echo "Start the local node servers"
 forever stopall
