@@ -20,12 +20,12 @@ SCRIPTNAME=/etc/init.d/ibeacon
 case "$1" in
 start)
         printf "%-50s" "Starting ibeacon..."
-        cd /home/pi/dashboard/commands
+        cd /home/pi/dashboard/scripts/commands
         ./start
 ;;
 stop)
         printf "%-50s" "Stopping ibeacon..."
-        cd /home/pi/dashboard/commands
+        cd /home/pi/dashboard/scripts/commands
         ./stop
 ;;
 restart)
