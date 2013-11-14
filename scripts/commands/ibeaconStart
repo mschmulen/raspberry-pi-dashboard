@@ -1,5 +1,5 @@
 #!/bin/sh
-cd /home/pi
+cd /home/pi/dashboard/scripts
 . ./ibeacon.conf
 echo "Launching virtual iBeacon..."
 sudo hciconfig $BLUETOOTH_DEVICE up
