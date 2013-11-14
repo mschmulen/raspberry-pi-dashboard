@@ -6,6 +6,7 @@
 @xset -dpms       # Turn off power saving
 @xset s noblank   # Disable screen blanking
 @unclutter        # Hide the mouse cursor
+#unclutter -display :0 -noevents -grab
 
 #start the node server
 #@sudo /etc/init.d/dashboard start

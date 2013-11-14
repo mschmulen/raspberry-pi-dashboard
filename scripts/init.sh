@@ -10,12 +10,12 @@ cd ~/dashboard
 
 echo "init.d - iBeacon Commands"
 sudo cp scripts/commands/ibeacon /etc/init.d/
-sudo chmod 777 /etc/init.d/ibeacon
+sudo chmod 755 /etc/init.d/ibeacon
 sudo update-rc.d ibeacon defaults
 
 echo "init.d - dashboard Commands"
 sudo cp scripts/commands/dashboard /etc/init.d/
-sudo chmod 777 /etc/init.d/dashboard
+sudo chmod 755 /etc/init.d/dashboard
 sudo update-rc.d dashboard defaults
 
 echo "update LXDE autostart script"
