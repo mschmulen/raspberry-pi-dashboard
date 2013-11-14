@@ -9,11 +9,13 @@
 cd ~/dashboard
 
 echo "init.d - iBeacon Commands"
+#sudo update-rc.d -f piBoard remove
 sudo cp scripts/commands/ibeacon /etc/init.d/
 sudo chmod 755 /etc/init.d/ibeacon
 sudo update-rc.d ibeacon defaults
 
 echo "init.d - piBoard Commands"
+#sudo update-rc.d -f piBoard remove
 sudo cp scripts/commands/piBoard /etc/init.d/
 sudo chmod 755 /etc/init.d/piBoard
 sudo update-rc.d piBoard defaults
