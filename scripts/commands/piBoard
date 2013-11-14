@@ -26,11 +26,11 @@ DAEMON_NAME=piBoard
 #DAEMON_USER=root
 #PIDFILE=/var/run/$DAEMON_NAME.pid
 
-do_start () {
-		log_daemon_msg "Starting system $DAEMON_NAME daemon"
-		sudo forever start /home/pi/dashboard/server/node-server/app.js
-    log_end_msg $?
-}
+#do_start () {
+#		log_daemon_msg "Starting system $DAEMON_NAME daemon"
+sudo forever start /home/pi/dashboard/server/node-server/app.js
+#    log_end_msg $?
+#}
 
 #always start the server
 #sudo forever start /home/pi/dashboard/server/node-server/app.js
