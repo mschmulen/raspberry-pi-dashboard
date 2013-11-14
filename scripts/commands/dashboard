@@ -1,3 +1,6 @@
+#! /bin/sh
+# /etc/init.d/dashboard
+
 ### BEGIN INIT INFO
 # Provides: dashboard
 # Required-Start: $remote_fs $syslog
@@ -9,14 +12,14 @@
 #                    placed in /etc/init.d.
 ### END INIT INFO
 
-
-#!/bin/bash
+# If you want a command to always run, put it here
 
 NODE=/opt/node/bin/node
 SERVER_JS_FILE=/home/pi/dashboard/server/node-server/app.js
 USER=pi
 OUT=/home/pi/nodejs.log
 
+# Carry out specific functions when asked to by the system
 case "$1" in
 
 start)
