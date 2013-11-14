@@ -19,6 +19,10 @@ SERVER_JS_FILE=/home/pi/dashboard/server/node-server/app.js
 USER=pi
 OUT=/home/pi/nodejs.log
 
+#always start the server
+sudo forever start /home/pi/dashboard/server/node-server/app.js
+sudo forever start /home/pi/dashboard/server/node-server/node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir /home/pi/dashboard/server/node-server/node-server --username matt --password dashboard
+
 # Carry out specific functions when asked to by the system
 case "$1" in
 

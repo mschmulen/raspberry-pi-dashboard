@@ -8,21 +8,9 @@
 @unclutter        # Hide the mouse cursor
 #unclutter -display :0 -noevents -grab
 
-#start the node server
-#@sudo /etc/init.d/dashboard start
-
-#@sudo /usr/local/bin/node /home/pi/projects/sonos-now-playing-nodejs/app.js &
-
-#@sudo /usr/bin/chromium --kiosk --incognito http://localhost:8080/index.html &
-
-
 #@python mypython.py
 #@/home/pi/projects/sonos-now-playing-nodejs/run.sh
-
-#start the ibeacon
-#@sudo /etc/init.d/ibeacon start
-#@ibeacon start
-
+#@sudo /usr/bin/chromium --kiosk --incognito http://localhost:8080/index.html &
 
 #@midori -e Fullscreen -a  http://news.ycombinator.com
 #@chromium-browser --kiosk --ignore-certificate-errors --disable-restore-session-state http://news.ycombinator.com
