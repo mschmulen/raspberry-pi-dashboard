@@ -13,10 +13,10 @@ sudo cp scripts/commands/ibeacon /etc/init.d/
 sudo chmod 755 /etc/init.d/ibeacon
 sudo update-rc.d ibeacon defaults
 
-echo "init.d - dashboard Commands"
-sudo cp scripts/commands/dashboard /etc/init.d/
-sudo chmod 755 /etc/init.d/dashboard
-sudo update-rc.d dashboard defaults
+echo "init.d - piBoard Commands"
+sudo cp scripts/commands/piBoard /etc/init.d/
+sudo chmod 755 /etc/init.d/piBoard
+sudo update-rc.d piBoard defaults
 
 echo "update LXDE autostart script"
 sudo cp scripts/autostart /etc/xdg/lxsession/LXDE
