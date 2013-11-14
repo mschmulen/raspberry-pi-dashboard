@@ -9,7 +9,8 @@
 # Default-Stop: 0 1 6
 # Short-Description: Start daemon at boot time
 # Description:       This file should be used to construct scripts to be
-#                    placed in /etc/init.d.
+#                    placed in /etc/init.d. 
+# 									test with  /etc/init.d/piBoard start
 ### END INIT INFO
 
 # If you want a command to always run, put it here
@@ -19,16 +20,16 @@ SERVER_JS_FILE=/home/pi/dashboard/server/node-server/app.js
 USER=pi
 OUT=/home/pi/nodejs.log
 
-#DIR=/usr/pi/dashboard/
-#DAEMON=$DIR/commands/yack.js
+DIR=/usr/pi/dashboard/
+DAEMON=$DIR/commands/piBoard
 DAEMON_NAME=piBoard
 
-#DAEMON_USER=root
-#PIDFILE=/var/run/$DAEMON_NAME.pid
+DAEMON_USER=root
+PIDFILE=/var/run/$DAEMON_NAME.pid
 
 #do_start () {
 #		log_daemon_msg "Starting system $DAEMON_NAME daemon"
-sudo forever start /home/pi/dashboard/server/node-server/app.js
+#sudo forever start /home/pi/dashboard/server/node-server/app.js
 #    log_end_msg $?
 #}
 

@@ -6,6 +6,9 @@
 	#git fetch --all
 	#git reset --hard origin/master
 
+
+#consider putting scripts in /usr/local/bin/myservice
+
 cd ~/dashboard
 echo "init.d - iBeacon Commands"
 #sudo update-rc.d -f ibeacon remove
