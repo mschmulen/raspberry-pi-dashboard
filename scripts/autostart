@@ -8,6 +8,9 @@
 @unclutter        # Hide the mouse cursor
 #unclutter -display :0 -noevents -grab
 
+#start the piBoard
+@./piBoard start
+
 #@python mypython.py
 #@/home/pi/projects/sonos-now-playing-nodejs/run.sh
 #@sudo /usr/bin/chromium --kiosk --incognito http://localhost:8080/index.html &

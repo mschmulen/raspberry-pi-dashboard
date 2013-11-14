@@ -19,6 +19,19 @@ SERVER_JS_FILE=/home/pi/dashboard/server/node-server/app.js
 USER=pi
 OUT=/home/pi/nodejs.log
 
+#DIR=/usr/pi/dashboard/
+#DAEMON=$DIR/commands/yack.js
+DAEMON_NAME=piBoard
+
+#DAEMON_USER=root
+#PIDFILE=/var/run/$DAEMON_NAME.pid
+
+do_start () {
+		log_daemon_msg "Starting system $DAEMON_NAME daemon"
+		sudo forever start /home/pi/dashboard/server/node-server/app.js
+    log_end_msg $?
+}
+
 #always start the server
 #sudo forever start /home/pi/dashboard/server/node-server/app.js
 #sudo forever start /home/pi/dashboard/server/node-server/node_modules/node-mirror/bin/nodeMirror.js --port 3030 --dir /home/pi/dashboard/server/node-server --username matt --password dashboard
