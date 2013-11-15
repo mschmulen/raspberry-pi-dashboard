@@ -1,12 +1,8 @@
-/*
- * GET home page.
- */
+// GET home page.
 
+var os=require('os'); //http://nodejs.org/api/os.html#os_os_networkinterfaces 
 
-var os=require('os');
-
-///http://nodejs.org/api/os.html#os_os_networkinterfaces 
-
+//var MYmetricBoards = require('metricBoards.json')
 
 function index(req, res){
   
@@ -17,20 +13,20 @@ function index(req, res){
   
   for (var dev in ifaces) {
     var alias=0;
-	
+		
     ifaces[dev].forEach(function(details){
-      if (details.family=='IPv4') {
+	      if (details.family=='IPv4') {
 		  
-		  var obj = {
-		          address: details.address,
-		          family: details.family,
-				  name:dev
-		      };
-		  iPV4Interfaces.push(obj);
-		  
-          console.log(dev+(alias?':'+alias:''),details.address);
-          ++alias;
-      }
+			  var obj = {
+			  	address: details.address,
+			    family: details.family,
+					name:dev
+			  };
+			  iPV4Interfaces.push(obj);
+		  	
+	      console.log(dev+(alias?':'+alias:''),details.address);
+	      ++alias;
+	   	}
     });
   }//end for
   
