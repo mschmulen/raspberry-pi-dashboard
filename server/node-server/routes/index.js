@@ -76,7 +76,6 @@ function home(req, res){
 	var metricBoards = [];
 	metricBoards.push("dashboard-static.html");
 	metricBoards.push("http://woot.com");
-	metricBoards.push("http://twitter.com/StrongLoop");
 	metricBoards.push("http://reddit.com");
 	metricBoards.push("http://bl.ocks.org/mbostock/raw/5977197/");
 	metricBoards.push("http://bl.ocks.org/mbostock/raw/5100636/");
