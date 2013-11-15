@@ -82,6 +82,7 @@ function home(req, res){
 	metricBoards.push("http://bl.ocks.org/mbostock/raw/4679202/");
 	metricBoards.push("http://bl.ocks.org/mbostock/raw/6746848");
 	metricBoards.push("SVG-simple.html");
+	metricBoards.push("http://news.ycombinator.com");
 	//metricBoards.push("simpleSVG-barChart.html");
 	//metricBoards.push("SVG-globe.html");
 	
