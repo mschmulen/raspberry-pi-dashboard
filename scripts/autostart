@@ -9,7 +9,10 @@
 #unclutter -display :0 -noevents -grab
 
 #start the piBoard
-@./piBoard start
+/etc/init.d/piBoard start
+
+#start the iBeacon Service
+/etc/init.d/ibeacon start
 
 #@python mypython.py
 #@/home/pi/projects/sonos-now-playing-nodejs/run.sh

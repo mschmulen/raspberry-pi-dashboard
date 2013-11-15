@@ -18,8 +18,8 @@ PIDFILE=/var/run/ibeacon.pid
 SCRIPTNAME=/etc/init.d/ibeacon
 
 #always start the ibeacon
-cd /home/pi/dashboard/scripts/commands
-./ibeaconStart
+#cd /home/pi/dashboard/scripts/commands
+#./ibeaconStart
 
 
 case "$1" in
