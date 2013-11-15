@@ -71,6 +71,21 @@ function dashboard(req, res){
 }//end dashboard
 
 function home(req, res){
+	
+	//local metricBoards for randomly rotating
+	var metricBoards = [];
+	metricBoards.push("dashboard-static.html");
+	metricBoards.push("http://woot.com");
+	metricBoards.push("http://twitter.com/StrongLoop");
+	metricBoards.push("http://reddit.com");
+	metricBoards.push("http://bl.ocks.org/mbostock/raw/5977197/");
+	metricBoards.push("http://bl.ocks.org/mbostock/raw/5100636/");
+	metricBoards.push("http://bl.ocks.org/mbostock/raw/4679202/");
+	metricBoards.push("http://bl.ocks.org/mbostock/raw/6746848");
+	
+	//metricBoards.push("simpleSVG-barChart.html");
+	//metricBoards.push("SVG-globe.html");
+	
   //process.env.PORT, process.env.IP
   var ifaces=os.networkInterfaces();
   
@@ -95,7 +110,16 @@ function home(req, res){
     });
   }//end for
   
-  res.render('home', { title: 'dashboard-server', iPV4Interfaces:iPV4Interfaces });
+	//var boardURL = metricBoards[ Math.floor((Math.random()*metricBoards.length)+1); ] 
+	//var boardURL = "dashboard-static.html";//metricBoards[ 0 ]; 
+	var boardURL = metricBoards[ Math.floor((Math.random()* metricBoards.length ) ) ] 
+	
+	var user = {
+		picURL: "https://pbs.twimg.com/profile_images/378800000261764427/63adb78327a8017fb671e76411c1902a_bigger.png",
+		twitterID: "@strongloop"
+	}
+	
+  res.render('home', { title: 'dashboard-server', currentUser:user, iFrameURL: boardURL, iPV4Interfaces:iPV4Interfaces });
 
 }//end dashboard
 
